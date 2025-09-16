@@ -1,0 +1,19 @@
+%% 博客系统ER图（Mermaid语法）
+
+erDiagram
+  USER ||--o{ POST : writes
+  USER ||--o{ COMMENT : makes
+  USER ||--o{ USER_FOLLOW : follows
+  USER ||--o{ FAVORITE : favorites
+  USER ||--o{ LIKE : likes
+  USER }o--|| ROLE : has
+  USER ||--o{ NOTIFICATION : receives
+  POST ||--o{ COMMENT : has
+  POST ||--o{ POST_TAG : tagged
+  POST ||--o{ POST_CATEGORY : categorized
+  POST ||--o{ FAVORITE : favorited
+  POST ||--o{ LIKE : liked
+  POST_TAG }o--|| TAG : references
+  POST_CATEGORY }o--|| CATEGORY : references
+  FAVORITE }o--|| FAVORITE_FOLDER : in_folder
+  CATEGORY ||--o{ CATEGORY : sub_category
