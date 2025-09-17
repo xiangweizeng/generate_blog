@@ -3,11 +3,11 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RedisModule } from './shared/redis/redis.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { UserModule } from './modules/user/user.module';
-import { PostModule } from './modules/post/post.module';
-import { CommentModule } from './modules/comment/comment.module';
-import { CategoryModule } from './modules/category/category.module';
-import { TagModule } from './modules/tag/tag.module';
+import { UsersModule } from './modules/users/users.module';
+import { PostsModule } from './modules/posts/posts.module';
+import { CommentsModule } from './modules/comments/comments.module';
+import { CategoriesModule } from './modules/categories/categories.module';
+import { TagsModule } from './modules/tags/tags.module';
 
 @Module({
   imports: [
@@ -30,11 +30,11 @@ import { TagModule } from './modules/tag/tag.module';
     }),
     RedisModule,
     AuthModule,
-    UserModule,
-    PostModule,
-    CommentModule,
-    CategoryModule,
-    TagModule,
+    UsersModule,
+    PostsModule,
+    CommentsModule,
+    CategoriesModule,
+    TagsModule,
   ],
 })
 export class AppModule {}
